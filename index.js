@@ -76,7 +76,6 @@ const run = async () => {
       // 4.0 (3.0 bag) Choose pokeball
       const pokeballChosen = await throwPokeball(user.bag)
       const caught = await catchPokemon(pokemon.name, pokeballChosen.answer, {
-        name: pokemon.name,
         hp: pokemon.hp,
         catchRate: pokemon.catchRate
       })

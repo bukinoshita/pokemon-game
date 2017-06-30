@@ -712,6 +712,15 @@ caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
 
+catch-pokemon@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/catch-pokemon/-/catch-pokemon-0.0.1.tgz#6d0cf1ef408aec888e7e416cfcf1527cce31666c"
+  dependencies:
+    got "^7.0.0"
+    pokeball-shake "^0.0.1"
+    pokemon-capture-quote "^0.0.1"
+    pokemon-f "^0.0.1"
+
 chalk@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-0.4.0.tgz#5199a3ddcd0c1efe23bc08c1b027b06176e0c64f"
@@ -1617,6 +1626,10 @@ generate-object-property@^1.1.0:
   dependencies:
     is-property "^1.0.0"
 
+get-pokeball@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/get-pokeball/-/get-pokeball-0.0.1.tgz#70f90decf0d436825a6abe152dc8962ecf6f822c"
+
 get-port@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/get-port/-/get-port-3.1.0.tgz#ef01b18a84ca6486970ff99e54446141a73ffd3e"
@@ -1715,7 +1728,7 @@ got@^6.7.1:
     unzip-response "^2.0.1"
     url-parse-lax "^1.0.0"
 
-got@^7.1.0:
+got@^7.0.0, got@^7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/got/-/got-7.1.0.tgz#05450fd84094e6bbea56f451a43a9c289166385a"
   dependencies:
@@ -2971,6 +2984,23 @@ plur@^2.0.0, plur@^2.1.2:
 pluralize@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
+
+pokeball-shake@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/pokeball-shake/-/pokeball-shake-0.0.1.tgz#7e37d253fc99faaf30b4ae842d67291f59d4f244"
+  dependencies:
+    get-pokeball "^0.0.1"
+    pokemon-f "^0.0.1"
+
+pokemon-capture-quote@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/pokemon-capture-quote/-/pokemon-capture-quote-0.0.1.tgz#30ad795cda2a0ba79de892b792ff6b39d5120a89"
+
+pokemon-f@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/pokemon-f/-/pokemon-f-0.0.1.tgz#954540ab588140947411a9cb4707211bfa50b8cc"
+  dependencies:
+    get-pokeball "^0.0.1"
 
 prelude-ls@~1.1.2:
   version "1.1.2"

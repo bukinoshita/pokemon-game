@@ -11,6 +11,7 @@
     "test": "xo --quiet"
   },
   "dependencies": {
+    "catch-pokemon": "^0.0.1",
     "chalk": "^2.0.1",
     "define-probability": "^0.0.1",
     "got": "^7.1.0",
@@ -20,8 +21,7 @@
     "shout-error": "^0.0.1",
     "shout-message": "^0.0.1",
     "shout-success": "^0.0.1",
-    "update-notifier": "^2.2.0",
-    "catch-pokemon": "^0.0.1"
+    "update-notifier": "^2.2.0"
   },
   "devDependencies": {
     "ava": "^0.20.0",
@@ -36,7 +36,9 @@
     "pokemon": "index.js"
   },
   "xo": {
-    "extends": ["prettier"],
+    "extends": [
+      "prettier"
+    ],
     "space": true,
     "semicolon": false,
     "esnext": true,
