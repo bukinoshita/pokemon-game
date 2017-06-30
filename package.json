@@ -20,7 +20,8 @@
     "shout-error": "^0.0.1",
     "shout-message": "^0.0.1",
     "shout-success": "^0.0.1",
-    "update-notifier": "^2.2.0"
+    "update-notifier": "^2.2.0",
+    "catch-pokemon": "^0.0.1"
   },
   "devDependencies": {
     "ava": "^0.20.0",
