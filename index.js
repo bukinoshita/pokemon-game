@@ -38,8 +38,8 @@ const run = async () => {
   if (cmd === 'catch') {
     const spinner = ora('Finding pokemon...')
     spinner.start()
-    // 1.0 Get a random pokemon
     try {
+      // 1.0 Get a random pokemon
       const pokemon = await getRandomPokemon()
       spinner.stop()
       shoutMessage(`A wild ${pokemon.name} appeared!`)
@@ -50,12 +50,10 @@ const run = async () => {
         return shoutMessage(`The Pokemon fled! Don't believe it.`)
       }
 
-      // 2.2 If not, show bag with pokeballs and items available to use
-      // 3.0 Use item to froze, paralyze etc pokemon
-      // 3.1 Run probability to affect pokemon
-      // 3.2 Choose pokeball
-      // 3.3 Run probability to catch pokemon
-      // 4.0 Caught || Throw pokeball again || pokemon run
+      // 3.0 If not, show user actions (bag/run)
+      // 4.0 (3.0 bag) Choose pokeball
+      // 4.0 (3.0 run) Run probability of escaping from wild pokemon
+      // 5.0 Run probability to catch pokemon
     } catch (err) {
       spinner.stop()
       shoutError(err)
