@@ -3,6 +3,10 @@
 
 const meow = require('meow')
 const updateNotifier = require('update-notifier')
+const ora = require('ora')
+const shoutError = require('shout-error')
+
+const getRandomPokemon = require('./lib/get-random-pokemon')
 
 const cli = meow(
   `
@@ -26,11 +30,22 @@ const cli = meow(
 
 updateNotifier({ pkg: cli.pkg }).notify()
 
-const run = () => {
+const run = async () => {
   const cmd = cli.input[0]
 
   if (cmd === 'catch') {
+    const spinner = ora('Finding pokemon...')
+    spinner.start()
     // 1.0 Get a random pokemon
+    try {
+      const pokemon = await getRandomPokemon()
+      spinner.stop()
+      console.log(`A wild ${pokemon.name} appeared!`)
+    } catch (err) {
+      spinner.stop()
+      shoutError(err)
+    }
+
     // 2.0 Run probability of pokemon running
     // 2.1 If pokemon runs -> throw message
     // 2.2 If not, show bag with pokeballs and items available to use
