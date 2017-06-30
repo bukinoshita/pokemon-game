@@ -9,9 +9,9 @@ const shoutMessage = require('shout-message')
 const shoutSuccess = require('shout-success')
 const chalk = require('chalk')
 const catchPokemon = require('catch-pokemon')
+const pokemonEscape = require('pokemon-escape')
 
 const getRandomPokemon = require('./lib/get-random-pokemon')
-const fleeRate = require('./lib/flee-rate')
 const userActions = require('./lib/user-actions')
 const throwPokeball = require('./lib/throw-pokeball')
 
@@ -60,7 +60,7 @@ const run = async () => {
       shoutMessage(`A wild ${chalk.green.bold(pokemon.name)} appeared!\n`)
 
       // 2.0 Run probability of pokemon running
-      if (fleeRate(pokemon.fleeRate)) {
+      if (pokemonEscape(pokemon.fleeRate)) {
         // 2.1 If pokemon runs -> throw message
         return shoutMessage(`The Pokemon fled! Don't believe it.`)
       }
