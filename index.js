@@ -9,6 +9,7 @@ const shoutMessage = require('shout-message')
 
 const getRandomPokemon = require('./lib/get-random-pokemon')
 const fleeRate = require('./lib/flee-rate')
+const userActions = require('./lib/user-actions')
 
 const cli = meow(
   `
@@ -51,8 +52,13 @@ const run = async () => {
       }
 
       // 3.0 If not, show user actions (bag/run)
+      const userAnswer = await userActions()
+
+      if (userAnswer === 'run') {
+        // 4.0 (3.0 run) Run probability of escaping from wild pokemon
+      }
+
       // 4.0 (3.0 bag) Choose pokeball
-      // 4.0 (3.0 run) Run probability of escaping from wild pokemon
       // 5.0 Run probability to catch pokemon
     } catch (err) {
       spinner.stop()
