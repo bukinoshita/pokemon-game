@@ -5,8 +5,10 @@ const meow = require('meow')
 const updateNotifier = require('update-notifier')
 const ora = require('ora')
 const shoutError = require('shout-error')
+const shoutMessage = require('shout-message')
 
 const getRandomPokemon = require('./lib/get-random-pokemon')
+const fleeRate = require('./lib/flee-rate')
 
 const cli = meow(
   `
@@ -40,20 +42,24 @@ const run = async () => {
     try {
       const pokemon = await getRandomPokemon()
       spinner.stop()
-      console.log(`A wild ${pokemon.name} appeared!`)
+      shoutMessage(`A wild ${pokemon.name} appeared!`)
+
+      // 2.0 Run probability of pokemon running
+      if (fleeRate(pokemon.fleeRate)) {
+        // 2.1 If pokemon runs -> throw message
+        return shoutMessage(`The Pokemon fled! Don't believe it.`)
+      }
+
+      // 2.2 If not, show bag with pokeballs and items available to use
+      // 3.0 Use item to froze, paralyze etc pokemon
+      // 3.1 Run probability to affect pokemon
+      // 3.2 Choose pokeball
+      // 3.3 Run probability to catch pokemon
+      // 4.0 Caught || Throw pokeball again || pokemon run
     } catch (err) {
       spinner.stop()
       shoutError(err)
     }
-
-    // 2.0 Run probability of pokemon running
-    // 2.1 If pokemon runs -> throw message
-    // 2.2 If not, show bag with pokeballs and items available to use
-    // 3.0 Use item to froze, paralyze etc pokemon
-    // 3.1 Run probability to affect pokemon
-    // 3.2 Choose pokeball
-    // 3.3 Run probability to catch pokemon
-    // 4.0 Caught || Throw pokeball again || pokemon run
   }
 
   if (cmd === 'shop') {
