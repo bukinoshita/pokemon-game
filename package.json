@@ -1,0 +1,13 @@
+{
+  "name": "pokemon-game",
+  "version": "0.0.0",
+  "description": "Pokemon game — Get 'em all",
+  "main": "index.js",
+  "repository": "https://github.com/bukinoshita/pokemon-game.git",
+  "author": "Bu Kinoshita <bukinoshita@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "meow": "^3.7.0",
+    "update-notifier": "^2.2.0"
+  }
+}
