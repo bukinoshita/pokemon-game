@@ -6,7 +6,9 @@ const updateNotifier = require('update-notifier')
 const ora = require('ora')
 const shoutError = require('shout-error')
 const shoutMessage = require('shout-message')
+const shoutSuccess = require('shout-success')
 const chalk = require('chalk')
+const catchPokemon = require('catch-pokemon')
 
 const getRandomPokemon = require('./lib/get-random-pokemon')
 const fleeRate = require('./lib/flee-rate')
@@ -73,9 +75,18 @@ const run = async () => {
 
       // 4.0 (3.0 bag) Choose pokeball
       const pokeballChosen = await throwPokeball(user.bag)
-      console.log(pokeballChosen)
+      const caught = await catchPokemon(pokemon.name, pokeballChosen.answer, {
+        name: pokemon.name,
+        hp: pokemon.hp,
+        catchRate: pokemon.catchRate
+      })
 
       // 5.0 Run probability to catch pokemon
+      if (caught === `All right! ${pokemon.name} was caught!`) {
+        return shoutSuccess(caught)
+      }
+
+      shoutMessage(caught)
     } catch (err) {
       spinner.stop()
       shoutError(err)
