@@ -6,10 +6,12 @@ const updateNotifier = require('update-notifier')
 const ora = require('ora')
 const shoutError = require('shout-error')
 const shoutMessage = require('shout-message')
+const chalk = require('chalk')
 
 const getRandomPokemon = require('./lib/get-random-pokemon')
 const fleeRate = require('./lib/flee-rate')
 const userActions = require('./lib/user-actions')
+const throwPokeball = require('./lib/throw-pokeball')
 
 const cli = meow(
   `
@@ -40,10 +42,20 @@ const run = async () => {
     const spinner = ora('Finding pokemon...')
     spinner.start()
     try {
+      // User fake api
+      const user = {
+        name: 'Bu Kinoshita',
+        bag: [
+          { name: 'Poké ball', slug: 'pokeball', quantity: 10 },
+          { name: 'Ultra ball', slug: 'ultraball', quantity: 5 },
+          { name: 'Great ball', slug: 'greatball', quantity: 7 },
+          { name: 'Master ball', slug: 'masterball', quantity: 1 }
+        ]
+      }
       // 1.0 Get a random pokemon
       const pokemon = await getRandomPokemon()
       spinner.stop()
-      shoutMessage(`A wild ${pokemon.name} appeared!`)
+      shoutMessage(`A wild ${chalk.green.bold(pokemon.name)} appeared!\n`)
 
       // 2.0 Run probability of pokemon running
       if (fleeRate(pokemon.fleeRate)) {
@@ -52,13 +64,17 @@ const run = async () => {
       }
 
       // 3.0 If not, show user actions (bag/run)
-      const userAnswer = await userActions()
+      const userAction = await userActions()
 
-      if (userAnswer === 'run') {
+      if (userAction.answer === 'run') {
         // 4.0 (3.0 run) Run probability of escaping from wild pokemon
+        return shoutMessage('You escaped')
       }
 
       // 4.0 (3.0 bag) Choose pokeball
+      const pokeballChosen = await throwPokeball(user.bag)
+      console.log(pokeballChosen)
+
       // 5.0 Run probability to catch pokemon
     } catch (err) {
       spinner.stop()
