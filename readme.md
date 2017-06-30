@@ -1,6 +1,8 @@
 # pokemon-game [![Build Status](https://travis-ci.org/bukinoshita/pokemon-game.svg?branch=master)](https://travis-ci.org/bukinoshita/pokemon-game)
 
-## In progress [feel free to contribute](https://github.com/bukinoshita/pokemon-game/issues)
+## In progress
+
+Feel free to contribute [here](https://github.com/bukinoshita/pokemon-game/issues). Will be adding issues.
 
 ## Related
 
