@@ -6,8 +6,36 @@
   "repository": "https://github.com/bukinoshita/pokemon-game.git",
   "author": "Bu Kinoshita <bukinoshita@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "precommit": "lint-staged",
+    "test": "xo --quiet"
+  },
   "dependencies": {
     "meow": "^3.7.0",
     "update-notifier": "^2.2.0"
+  },
+  "devDependencies": {
+    "ava": "^0.20.0",
+    "eslint-config-prettier": "^2.3.0",
+    "husky": "^0.14.1",
+    "lint-staged": "^4.0.0",
+    "prettier": "^1.5.2",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "extends": ["prettier"],
+    "space": true,
+    "semicolon": false,
+    "esnext": true,
+    "rules": {
+      "object-curly-spacing": 0
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run test",
+      "prettier --semi false --single-quote --write",
+      "git add"
+    ]
   }
 }
