@@ -1040,6 +1040,10 @@ deep-strict-equal@^0.2.0:
   dependencies:
     core-assert "^0.2.0"
 
+define-probability@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/define-probability/-/define-probability-0.0.1.tgz#d7b38678c3fe9f9213d1cf9bc2f3802e042d61a3"
+
 del@^2.0.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/del/-/del-2.2.2.tgz#c12c981d067846c84bcaf862cff930d907ffd1a8"

@@ -11,6 +11,7 @@
     "test": "xo --quiet"
   },
   "dependencies": {
+    "define-probability": "^0.0.1",
     "got": "^7.1.0",
     "meow": "^3.7.0",
     "ora": "^1.3.0",
