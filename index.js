@@ -10,6 +10,7 @@ const shoutSuccess = require('shout-success')
 const chalk = require('chalk')
 const catchPokemon = require('catch-pokemon')
 const pokemonEscape = require('pokemon-escape')
+const { escape } = require('pokemon-player-escape')
 
 const getRandomPokemon = require('./lib/get-random-pokemon')
 const userActions = require('./lib/user-actions')
@@ -70,7 +71,11 @@ const run = async () => {
 
       if (userAction.answer === 'run') {
         // 4.0 (3.0 run) Run probability of escaping from wild pokemon
-        return shoutMessage('You escaped')
+        if (escape(50, pokemon.speed)) {
+          return shoutMessage('You escaped')
+        }
+
+        shoutMessage(`You didn't escape\n`)
       }
 
       // 4.0 (3.0 bag) Choose pokeball
