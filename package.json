@@ -2,7 +2,7 @@
   "name": "pokemon-game",
   "version": "0.0.0",
   "description": "Pokemon game — Get 'em all",
-  "main": "index.js",
+  "main": "bin/pokemon",
   "repository": "https://github.com/bukinoshita/pokemon-game.git",
   "author": "Bu Kinoshita <bukinoshita@gmail.com>",
   "license": "MIT",
@@ -23,6 +23,7 @@
     "shout-error": "^0.0.1",
     "shout-message": "^0.0.1",
     "shout-success": "^0.0.1",
+    "unique-random-array": "^1.0.0",
     "update-notifier": "^2.2.0"
   },
   "devDependencies": {
@@ -31,11 +32,10 @@
     "husky": "^0.14.1",
     "lint-staged": "^4.0.0",
     "prettier": "^1.5.2",
-    "unique-random-array": "^1.0.0",
     "xo": "^0.18.2"
   },
   "bin": {
-    "pokemon": "index.js"
+    "pokemon": "bin/pokemon.js"
   },
   "xo": {
     "extends": [
