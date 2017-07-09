@@ -6,6 +6,7 @@ const updateNotifier = require('update-notifier')
 
 const catchPokemon = require('./pokemon-catch')
 const login = require('./pokemon-login')
+const whoami = require('./pokemon-whoami')
 
 const cli = meow(
   `
@@ -51,8 +52,7 @@ const run = async () => {
       return login()
 
     case 'whoami':
-      // Show user stats (balance, name, pokemons, how many pokemons etc)
-      break
+      return whoami()
 
     case 'rankings':
       // Show rankings (who captured more pokemons)
