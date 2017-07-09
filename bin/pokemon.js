@@ -5,6 +5,7 @@ const meow = require('meow')
 const updateNotifier = require('update-notifier')
 
 const catchPokemon = require('./pokemon-catch')
+const login = require('./pokemon-login')
 
 const cli = meow(
   `
@@ -47,12 +48,7 @@ const run = async () => {
       break
 
     case 'login':
-      // Login user and persist (not sure yet)
-      break
-
-    case 'signup':
-      // Signup user, send email to verify, login user and persist (not sure yet)
-      break
+      return login()
 
     case 'whoami':
       // Show user stats (balance, name, pokemons, how many pokemons etc)

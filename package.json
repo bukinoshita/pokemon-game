@@ -17,9 +17,12 @@
     "got": "^7.1.0",
     "inquirer": "^3.1.1",
     "meow": "^3.7.0",
+    "node-fetch": "^1.7.1",
     "ora": "^1.3.0",
     "pokemon-escape": "^0.0.1",
     "pokemon-player-escape": "^0.0.1",
+    "prompt-email": "^0.0.1",
+    "querystring": "^0.2.0",
     "shout-error": "^0.0.1",
     "shout-message": "^0.0.1",
     "shout-success": "^0.0.1",
@@ -38,14 +41,13 @@
     "pokemon": "bin/pokemon.js"
   },
   "xo": {
-    "extends": [
-      "prettier"
-    ],
+    "extends": ["prettier"],
     "space": true,
     "semicolon": false,
     "esnext": true,
     "rules": {
-      "object-curly-spacing": 0
+      "object-curly-spacing": 0,
+      "no-await-in-loop": 0
     }
   },
   "lint-staged": {
