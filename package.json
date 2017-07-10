@@ -40,14 +40,8 @@
     "pokemon": "bin/pokemon.js"
   },
   "xo": {
-    "extends": [
-      "prettier"
-    ],
-    "space": true,
-    "semicolon": false,
-    "esnext": true,
+    "extends": ["prettier"],
     "rules": {
-      "object-curly-spacing": 0,
       "no-await-in-loop": 0
     }
   },
