@@ -14,7 +14,6 @@
     "catch-pokemon": "^0.0.1",
     "chalk": "^2.0.1",
     "define-probability": "^0.0.1",
-    "got": "^7.1.0",
     "inquirer": "^3.1.1",
     "meow": "^3.7.0",
     "node-fetch": "^1.7.1",
@@ -41,7 +40,9 @@
     "pokemon": "bin/pokemon.js"
   },
   "xo": {
-    "extends": ["prettier"],
+    "extends": [
+      "prettier"
+    ],
     "space": true,
     "semicolon": false,
     "esnext": true,
