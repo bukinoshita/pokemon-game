@@ -7,11 +7,18 @@ const updateNotifier = require('update-notifier')
 const catchPokemon = require('./pokemon-catch')
 const login = require('./pokemon-login')
 const whoami = require('./pokemon-whoami')
+const professor = require('./pokemon-professor')
 
 const cli = meow(
   `
   Usage:
-    $ pokemon
+    $ pokemon catch           Search a wild Pokémon to capture
+    $ pokemon login           Login to Pokémon Game
+    $ pokemon professor       Talk to Professor Oak
+    $ pokemon whoami          Show your information
+    $ pokemon shop            Buy items to put in your bag
+    $ pokemon rankings        See Rankings of best trainers
+    $ pokemon battle          Let's battle
 
   Example:
     $ pokemon
@@ -50,6 +57,9 @@ const run = async () => {
 
     case 'login':
       return login()
+
+    case 'professor':
+      return professor()
 
     case 'whoami':
       return whoami()

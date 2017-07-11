@@ -12,7 +12,7 @@ const { save } = require('./../lib/cfg')
 
 async function emailConfirmation(email) {
   const data = JSON.stringify({ email })
-  const res = await fetch(`https://pokedex-api.now.sh/registration`, {
+  const res = await fetch(`http://localhost:3001/registration`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ async function verify(userId, token) {
   }
 
   const res = await fetch(
-    `https://pokedex-api.now.sh/registration/verify?${stringifyQuery(query)}`,
+    `http://localhost:3001/registration/verify?${stringifyQuery(query)}`,
     {
       headers: {
         Authorization: token
@@ -87,7 +87,7 @@ async function register() {
   const data = {
     token,
     user: {
-      userId,
+      uid: userId,
       email: user.email
     },
     lastUpdate: Date.now()
