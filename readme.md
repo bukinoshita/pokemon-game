@@ -13,6 +13,8 @@ Feel free to contribute [here](https://github.com/bukinoshita/pokemon-game/issue
 - [pokeball-shake](https://github.com/bukinoshita/pokeball-shake) — Algorithm to determine how many times pokeball shakes
 - [pokemon-capture-quote](https://github.com/bukinoshita/pokemon-capture-quote) — Pokemon capture quote
 - [pokemon-f](https://github.com/bukinoshita/pokemon-f) — Algorithm to calculate `f` on capture pokemon method
+- [pokemon-escape](https://github.com/bukinoshita/pokemon-escape) — Check if Pokemon flee from battle
+- [pokemon-player-escape](https://github.com/bukinoshita/pokemon-player-escape) — Check if player escape from battle with wild Pokemon and get probability of escaping
 
 
 ## License
