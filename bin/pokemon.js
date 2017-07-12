@@ -8,6 +8,7 @@ const catchPokemon = require('./pokemon-catch')
 const login = require('./pokemon-login')
 const whoami = require('./pokemon-whoami')
 const professor = require('./pokemon-professor')
+const bag = require('./pokemon-bag')
 
 const cli = meow(
   `
@@ -15,6 +16,7 @@ const cli = meow(
     $ pokemon catch           Search a wild Pokémon to capture
     $ pokemon login           Login to Pokémon Game
     $ pokemon professor       Talk to Professor Oak
+    $ pokemon bag             Show your bag
     $ pokemon whoami          Show your information
     $ pokemon shop            Buy items to put in your bag
     $ pokemon rankings        See Rankings of best trainers
@@ -60,6 +62,9 @@ const run = async () => {
 
     case 'professor':
       return professor()
+
+    case 'bag':
+      return bag()
 
     case 'whoami':
       return whoami()
