@@ -20,44 +20,57 @@ module.exports = async () => {
   spinner.start()
 
   try {
-    const user = await getUser(read().token)
     const pokemon = await getRandomPokemon()
 
     spinner.stop()
-    shoutMessage(`A wild ${chalk.green.bold(pokemon.name)} appeared!\n`)
+    shoutMessage(`A wild ${chalk.green.bold(pokemon.name)} appeared!`)
 
-    if (pokemonEscape(pokemon.fleeRate)) {
-      return shoutMessage(`The Pokemon fled! Don't believe it.`)
-    }
+    let final = false
 
-    const userAction = await userActions()
+    do {
+      const user = await getUser(read().token)
 
-    if (userAction.answer === 'run') {
-      if (escape(50, pokemon.speed)) {
-        return shoutMessage('You escaped')
+      if (pokemonEscape(pokemon.fleeRate)) {
+        final = true
+        return shoutMessage(`The Pokemon fled! Don't believe it.`)
       }
 
-      shoutMessage(`You didn't escape\n`)
-    }
+      process.stdout.write('\n')
 
-    const pokeballChosen = await throwPokeball(user.bag)
-    const caught = await catchPokemon(pokemon.name, pokeballChosen.answer, {
-      hp: pokemon.hp,
-      catchRate: pokemon.catchRate
-    })
+      const userAction = await userActions()
 
-    if (caught === `All right! ${pokemon.name} was caught!`) {
+      if (userAction.answer === 'run') {
+        if (escape(50, pokemon.speed)) {
+          final = true
+          return shoutMessage('You escaped')
+        }
+
+        shoutMessage(`You didn't escape\n`)
+      }
+
+      const pokeballChosen = await throwPokeball(user.bag)
+      const caught = await catchPokemon(pokemon.name, pokeballChosen.answer, {
+        hp: pokemon.hp,
+        catchRate: pokemon.catchRate
+      })
+
+      if (caught === `All right! ${pokemon.name} was caught!`) {
+        await updateUser(read().token, {
+          type: pokeballChosen.answer,
+          pokemonId: pokemon._id,
+          capture: true
+        })
+        final = true
+        return shoutSuccess(caught)
+      }
+
       await updateUser(read().token, {
         type: pokeballChosen.answer,
-        pokemonId: pokemon._id
+        capture: true
       })
-      return shoutSuccess(caught)
-    }
 
-    await updateUser(read().token, {
-      type: pokeballChosen.answer
-    })
-    shoutMessage(caught)
+      shoutMessage(caught)
+    } while (!final)
   } catch (err) {
     spinner.stop()
     shoutError(err)
