@@ -10,6 +10,7 @@ const whoami = require('./pokemon-whoami')
 const professor = require('./pokemon-professor')
 const bag = require('./pokemon-bag')
 const rankings = require('./pokemon-rankings')
+const pokedex = require('./pokemon-pokedex')
 
 const cli = meow(
   `
@@ -17,6 +18,7 @@ const cli = meow(
     $ pokemon catch           Search a wild Pokémon to capture
     $ pokemon login           Login to Pokémon Game
     $ pokemon professor       Talk to Professor Oak
+    $ pokemon pokedex         Show your pokemons
     $ pokemon bag             Show your bag
     $ pokemon whoami          Show your information
     $ pokemon shop            Buy items to put in your bag
@@ -66,6 +68,9 @@ const run = async () => {
 
     case 'bag':
       return bag()
+
+    case 'pokedex':
+      return pokedex()
 
     case 'whoami':
       return whoami()
