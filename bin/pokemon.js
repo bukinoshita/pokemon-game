@@ -9,6 +9,7 @@ const login = require('./pokemon-login')
 const whoami = require('./pokemon-whoami')
 const professor = require('./pokemon-professor')
 const bag = require('./pokemon-bag')
+const rankings = require('./pokemon-rankings')
 
 const cli = meow(
   `
@@ -70,8 +71,7 @@ const run = async () => {
       return whoami()
 
     case 'rankings':
-      // Show rankings (who captured more pokemons)
-      break
+      return rankings()
 
     default:
       return cli.showHelp()
