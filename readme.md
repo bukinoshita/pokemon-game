@@ -4,6 +4,41 @@
 
 Feel free to contribute [here](https://github.com/bukinoshita/pokemon-game/issues). Will be adding issues.
 
+## Install
+
+```bash
+$ npm install --global pokemon-game
+```
+
+## Usage
+
+```bash
+$ pokemon --help
+
+  Usage:
+    $ pokemon catch           Search a wild Pokémon to capture
+    $ pokemon login           Login to Pokémon Game
+    $ pokemon professor       Talk to Professor Oak
+    $ pokemon pokedex         Show your pokemons
+    $ pokemon bag             Show your bag
+    $ pokemon whoami          Show your information
+    $ pokemon shop            Buy items to put in your bag
+    $ pokemon rankings        See Rankings of best trainers
+    $ pokemon battle          Let's battle
+
+  Options:
+    -h, --help                Show help options
+    -v, --version             Show version
+
+```
+
+## How it works
+
+<img src="https://cldup.com/w21W_BhwnW.png"/>
+<img src="https://cldup.com/Pl_AH1dzcd.png"/>
+<img src="https://cldup.com/J4JVgKU4Op.png"/>
+<img src="https://cldup.com/zsqqkijIkf.png"/>
+
 ## Related
 
 - [catch-pokemon](https://github.com/bukinoshita/catch-pokemon) — Algorithm to catch a pokemon
