@@ -20,11 +20,11 @@ $ pokemon --help
     $ pokemon login           Login to Pokémon Game
     $ pokemon professor       Talk to Professor Oak
     $ pokemon pokedex         Show your pokemons
-    $ pokemon bag             Show your bag
-    $ pokemon whoami          Show your information
-    $ pokemon shop            Buy items to put in your bag
     $ pokemon rankings        See Rankings of best trainers
+    $ pokemon bag             Show your bag
+    $ pokemon shop            Buy items to put in your bag
     $ pokemon battle          Let's battle
+    $ pokemon whoami          Show your information
 
   Options:
     -h, --help                Show help options

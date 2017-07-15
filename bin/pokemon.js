@@ -3,14 +3,16 @@
 
 const meow = require('meow')
 const updateNotifier = require('update-notifier')
+const shoutMessage = require('shout-message')
 
 const catchPokemon = require('./pokemon-catch')
 const login = require('./pokemon-login')
-const whoami = require('./pokemon-whoami')
 const professor = require('./pokemon-professor')
-const bag = require('./pokemon-bag')
-const rankings = require('./pokemon-rankings')
 const pokedex = require('./pokemon-pokedex')
+const rankings = require('./pokemon-rankings')
+const bag = require('./pokemon-bag')
+const shop = require('./pokemon-shop')
+const whoami = require('./pokemon-whoami')
 
 const cli = meow(
   `
@@ -19,14 +21,11 @@ const cli = meow(
     $ pokemon login           Login to Pokémon Game
     $ pokemon professor       Talk to Professor Oak
     $ pokemon pokedex         Show your pokemons
-    $ pokemon bag             Show your bag
-    $ pokemon whoami          Show your information
-    $ pokemon shop            Buy items to put in your bag
     $ pokemon rankings        See Rankings of best trainers
+    $ pokemon bag             Show your bag
+    $ pokemon shop            Buy items to put in your bag
     $ pokemon battle          Let's battle
-
-  Example:
-    $ pokemon
+    $ pokemon whoami          Show your information
 
   Options:
     -h, --help                Show help options
@@ -42,23 +41,12 @@ const cli = meow(
 
 updateNotifier({ pkg: cli.pkg }).notify()
 
-const run = async () => {
+const run = () => {
   const cmd = cli.input[0]
 
   switch (cmd) {
     case 'catch':
       return catchPokemon()
-
-    case 'shop':
-      // 1.0 Fetch user info (needs to be logged in)
-      // 1.1 Welcome user to shop and show balance
-      // 2.0 List of pokeballs and items
-      // 3.0 Buy / Sell (item or pokeball)
-      break
-
-    case 'battle':
-      // Soon
-      break
 
     case 'login':
       return login()
@@ -66,17 +54,25 @@ const run = async () => {
     case 'professor':
       return professor()
 
-    case 'bag':
-      return bag()
-
     case 'pokedex':
       return pokedex()
 
-    case 'whoami':
-      return whoami()
-
     case 'rankings':
       return rankings()
+
+    case 'bag':
+      return bag()
+
+    case 'shop':
+      return shop()
+
+    case 'battle':
+      return shoutMessage(
+        `Coming soon! Check https://github.com/bukinoshita/pokemon-game to see when it's available.`
+      )
+
+    case 'whoami':
+      return whoami()
 
     default:
       return cli.showHelp()
