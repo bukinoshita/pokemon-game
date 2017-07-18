@@ -1,8 +1,10 @@
 # pokemon-game [![Build Status](https://travis-ci.org/bukinoshita/pokemon-game.svg?branch=master)](https://travis-ci.org/bukinoshita/pokemon-game)
 
-## In progress
+## Notices
 
-Feel free to contribute [here](https://github.com/bukinoshita/pokemon-game/issues). Will be adding issues.
+- The objective of the game is to capture all Pokémons.
+- Each week trainers will earn items based on their ranking. (pokeballs, money, etc)
+- The game is in Beta. If you find an issue or have any suggestions or ideas, please report it [here](https://github.com/bukinoshita/pokemon-game/issues).
 
 ## Install
 
@@ -55,3 +57,5 @@ $ pokemon --help
 ## License
 
 MIT © [Bu Kinoshita](https://bukinoshita.io)
+
+_This game was created as an experiment / learning purpose just for fun. This project is not related to The Pokémon or Nintendo. Some data was collected from [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Main_Page)._
