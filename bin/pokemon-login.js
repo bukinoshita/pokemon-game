@@ -58,7 +58,12 @@ async function register() {
 
   process.stdout.write('\n')
 
+  const loading = ora('Adding you to the Pokémon World...')
+  loading.start()
+
   const { token, user } = await emailConfirmation(email)
+
+  loading.stop()
 
   shoutMessage(`Please follow the link sent to ${chalk.bold(email)} to log in.`)
 
