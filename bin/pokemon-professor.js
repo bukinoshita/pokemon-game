@@ -10,7 +10,7 @@ const { read, updateUser, merge } = require('./../lib/cfg')
 module.exports = async () => {
   const user = read()
 
-  if (!user.emailConfirmed) {
+  if (!user.token) {
     return shoutError(
       `You must be logged in. Run ${chalk.bold('`$ pokemon login`.')}`
     )
