@@ -2,12 +2,19 @@
 
 const inquirer = require('inquirer')
 const shoutMessage = require('shout-message')
+const shoutError = require('shout-error')
 const chalk = require('chalk')
 
 const { read, updateUser, merge } = require('./../lib/cfg')
 
 module.exports = async () => {
   const user = read()
+
+  if (!user.emailConfirmed) {
+    return shoutError(
+      `You must be logged in. Run ${chalk.bold('`$ pokemon login`.')}`
+    )
+  }
 
   if (user.professor) {
     return shoutMessage(

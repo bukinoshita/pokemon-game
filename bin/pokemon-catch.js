@@ -30,6 +30,14 @@ module.exports = async () => {
     do {
       const user = await getUser(read().token)
 
+      if (user.error) {
+        return shoutError(
+          `${user.error.message}, you must be logged in. Run ${chalk.bold(
+            '`$ pokemon login`.'
+          )}`
+        )
+      }
+
       if (pokemonEscape(pokemon.fleeRate)) {
         final = true
         return shoutMessage(`The Pokemon fled! Don't believe it.`)

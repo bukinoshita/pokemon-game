@@ -8,12 +8,14 @@ const { read, getUser } = require('./../lib/cfg')
 
 module.exports = async () => {
   const token = read().token
-  let user
-  try {
-    user = await getUser(token)
-  } catch (err) {
-    return shoutError(`We couldn't fetch your user information.`)
+
+  if (!token) {
+    return shoutError(
+      `You must be logged in. Run ${chalk.bold('`$ pokemon login`.')}`
+    )
   }
+
+  const user = await getUser(token)
 
   /* eslint-disable no-unused-expressions */
   user.name ? shoutMessage(user.name) : null
