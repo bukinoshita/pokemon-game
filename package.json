@@ -1,6 +1,6 @@
 {
   "name": "pokemon-game",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Pokemon game — Get 'em all",
   "main": "bin/pokemon",
   "repository": "https://github.com/bukinoshita/pokemon-game.git",
