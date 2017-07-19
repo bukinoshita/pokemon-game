@@ -4,7 +4,7 @@
 
 - The objective of the game is to capture all Pokémons.
 - Each week trainers will earn items based on their ranking. (pokeballs, money, etc)
-- The game is in Beta. If you find an issue or have any suggestions or ideas, please report it [here](https://github.com/bukinoshita/pokemon-game/issues).
+- The game is in **Beta**. If you find an issue or have any suggestions or ideas, please report it [here](https://github.com/bukinoshita/pokemon-game/issues).
 
 ## Install
 
