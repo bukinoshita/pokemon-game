@@ -10,6 +10,15 @@
     "precommit": "lint-staged",
     "test": "xo --quiet"
   },
+  "keywords": [
+    "pokemon",
+    "pokedex",
+    "nintendo",
+    "game",
+    "pokemons",
+    "pikachu",
+    "cli"
+  ],
   "dependencies": {
     "catch-pokemon": "^0.0.1",
     "chalk": "^2.0.1",
@@ -41,9 +50,7 @@
     "pokemon": "bin/pokemon.js"
   },
   "xo": {
-    "extends": [
-      "prettier"
-    ],
+    "extends": ["prettier"],
     "rules": {
       "no-await-in-loop": 0
     }
