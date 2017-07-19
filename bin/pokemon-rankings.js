@@ -3,18 +3,24 @@
 const shoutMessage = require('shout-message')
 const shoutError = require('shout-error')
 const chalk = require('chalk')
+const ora = require('ora')
 
 const { read } = require('./../lib/cfg')
 const getRankings = require('./../lib/get-rankings')
 
 module.exports = async () => {
+  const spinner = ora('Fetching rankings...')
   const { user } = read()
+  spinner.start()
   let rankings
   try {
     rankings = await getRankings()
   } catch (err) {
+    spinner.stop()
     return shoutError(`Try again later.`)
   }
+
+  spinner.stop()
 
   /* eslint-disable array-callback-return */
   rankings.trainers.map((trainer, index) => {

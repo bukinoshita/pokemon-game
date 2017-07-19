@@ -28,7 +28,17 @@ module.exports = async () => {
     let final = false
 
     do {
+      if (pokemonEscape(pokemon.fleeRate)) {
+        final = true
+        return shoutMessage(`The Pokemon fled! Don't believe it.`)
+      }
+
+      process.stdout.write('\n')
+
+      spinner.start('...')
       const user = await getUser(read().token)
+
+      spinner.stop()
 
       if (user.error) {
         return shoutError(
@@ -37,13 +47,6 @@ module.exports = async () => {
           )}`
         )
       }
-
-      if (pokemonEscape(pokemon.fleeRate)) {
-        final = true
-        return shoutMessage(`The Pokemon fled! Don't believe it.`)
-      }
-
-      process.stdout.write('\n')
 
       const userAction = await userActions()
 
@@ -62,6 +65,8 @@ module.exports = async () => {
         catchRate: pokemon.catchRate
       })
 
+      spinner.start('...')
+
       if (caught === `All right! ${pokemon.name} was caught!`) {
         await updateUser(read().token, {
           type: pokeballChosen.answer,
@@ -69,6 +74,7 @@ module.exports = async () => {
           capture: true
         })
         final = true
+        spinner.stop()
         return shoutSuccess(caught)
       }
 
@@ -76,6 +82,8 @@ module.exports = async () => {
         type: pokeballChosen.answer,
         capture: true
       })
+
+      spinner.stop()
 
       shoutMessage(caught)
     } while (!final)

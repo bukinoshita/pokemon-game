@@ -6,19 +6,25 @@ const shoutError = require('shout-error')
 const chalk = require('chalk')
 const inquirer = require('inquirer')
 const getPokeball = require('get-pokeball')
+const ora = require('ora')
 
 const { read, getUser, updateUser } = require('./../lib/cfg')
 
 module.exports = async () => {
+  const spinner = ora('Finding the nearest Poké Shop...')
   const token = read().token
+  spinner.start()
 
   if (!token) {
+    spinner.stop()
     return shoutError(
       `You must be logged in. Run ${chalk.bold('`$ pokemon login`.')}`
     )
   }
 
   const user = await getUser(token)
+
+  spinner.stop()
 
   shoutMessage('Welcome to Poké Shop!')
   shoutMessage(`Your balance $${chalk.bold(user.balance)}`)
