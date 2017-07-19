@@ -24,26 +24,17 @@ module.exports = async () => {
 
   /* eslint-disable array-callback-return */
   rankings.trainers.map((trainer, index) => {
-    const { name, pokemons, _id } = trainer
-    if (name === user.name) {
-      shoutMessage(
-        `${chalk.bold(name)}, you have ${chalk.bold(pokemons.length)} pokemons.`
-      )
-      process.stdout.write('\n')
-    }
-
+    const { name, pokedex, _id } = trainer
     const id = _id.substring(0, 4)
 
     if (name === user.name) {
       console.log(
         `${chalk.bold.green('⇢')} ${index +
-          1}. ${name} — ${pokemons.length} Pokémons ${chalk.gray(
-          '(#' + id + ')'
-        )}`
+          1}. ${name} — ${pokedex} Pokémons ${chalk.gray('(#' + id + ')')}`
       )
     } else {
       console.log(
-        `⇢ ${index + 1}. ${name} — ${pokemons.length} Pokémons ${chalk.gray(
+        `⇢ ${index + 1}. ${name} — ${pokedex} Pokémons ${chalk.gray(
           '(#' + id + ')'
         )}`
       )
