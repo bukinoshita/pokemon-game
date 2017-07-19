@@ -1,6 +1,6 @@
 {
   "name": "pokemon-game",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Pokemon game — Get 'em all",
   "main": "bin/pokemon",
   "repository": "https://github.com/bukinoshita/pokemon-game.git",
@@ -50,7 +50,9 @@
     "pokemon": "bin/pokemon.js"
   },
   "xo": {
-    "extends": ["prettier"],
+    "extends": [
+      "prettier"
+    ],
     "rules": {
       "no-await-in-loop": 0
     }
