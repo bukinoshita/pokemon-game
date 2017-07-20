@@ -67,13 +67,27 @@ module.exports = async () => {
     try {
       const pk = await getPokeball(pokeballChosen.answer)
 
+      const chooseQuantity = inquirer.prompt([
+        {
+          name: 'answer',
+          message: 'How many Pokéballs do you want to buy?',
+          default: 1
+        }
+      ])
+
+      const quantity = await chooseQuantity
+
       if (user.balance - pk.price.buy >= 0) {
         await updateUser(token, {
           buy: true,
-          type: pokeballChosen.answer
+          type: pokeballChosen.answer,
+          quantity: quantity.answer
         })
 
-        return shoutSuccess(`You just bought a ${pokeballChosen.answer}!`)
+        return shoutSuccess(
+          `You just bought ${quantity.answer} ${pk.name} for $${pk.price.buy *
+            quantity.answer}!`
+        )
       }
 
       return shoutError(`You don't have enough money.`)
