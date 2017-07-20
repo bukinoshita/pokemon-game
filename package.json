@@ -49,10 +49,9 @@
   "bin": {
     "pokemon": "bin/pokemon.js"
   },
+  "engines": ">=7.6.0",
   "xo": {
-    "extends": [
-      "prettier"
-    ],
+    "extends": ["prettier"],
     "rules": {
       "no-await-in-loop": 0
     }
