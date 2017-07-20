@@ -16,7 +16,7 @@ const throwPokeball = require('./../lib/throw-pokeball')
 const { getUser, read, updateUser } = require('./../lib/cfg')
 
 module.exports = async () => {
-  const spinner = ora('Finding pokemon...')
+  const spinner = ora('Finding Pokémon...')
   spinner.start()
 
   try {
@@ -30,7 +30,7 @@ module.exports = async () => {
     do {
       if (pokemonEscape(pokemon.fleeRate)) {
         final = true
-        return shoutMessage(`The Pokemon fled! Don't believe it.`)
+        return shoutMessage(`The Pokémon fled! Don't believe it.`)
       }
 
       process.stdout.write('\n')

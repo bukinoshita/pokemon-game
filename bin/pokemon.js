@@ -20,7 +20,7 @@ const cli = meow(
     $ pokemon catch           Search a wild Pokémon to capture
     $ pokemon login           Login to Pokémon Game
     $ pokemon professor       Talk to Professor Oak
-    $ pokemon pokedex         Show your pokemons
+    $ pokemon pokedex         Show your Pokémon
     $ pokemon rankings        See Rankings of best trainers
     $ pokemon bag             Show your bag
     $ pokemon shop            Buy items to put in your bag

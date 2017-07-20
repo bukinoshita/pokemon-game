@@ -23,7 +23,7 @@ module.exports = async () => {
   }
 
   shoutMessage(
-    `Welcome to the world of Pokemon! My name's ${chalk.bold(
+    `Welcome to the world of Pokémon! My name's ${chalk.bold(
       'Oak'
     )}, people call ${chalk.bold('Pokémon Prof')}.`
   )
@@ -69,7 +69,7 @@ module.exports = async () => {
     {
       type: 'list',
       name: 'answer',
-      message: 'Which Pokemon do you want?',
+      message: 'Which Pokémon do you want?',
       choices: [
         {
           name: 'Charmander',
@@ -90,7 +90,5 @@ module.exports = async () => {
   const pokemon = await choosePokemon
   await updateUser(user.token, { pokemonId: pokemon.answer })
 
-  shoutMessage(
-    `Awesome ${chalk.bold(name.answer)}! Keep catching all Pokémons!`
-  )
+  shoutMessage(`Awesome ${chalk.bold(name.answer)}! Keep catching all Pokémon!`)
 }

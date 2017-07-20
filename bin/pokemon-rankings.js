@@ -30,11 +30,11 @@ module.exports = async () => {
     if (name === user.name) {
       console.log(
         `${chalk.bold.green('⇢')} ${index +
-          1}. ${name} — ${pokedex} Pokémons ${chalk.gray('(#' + id + ')')}`
+          1}. ${name} — ${pokedex} Pokémon ${chalk.gray('(#' + id + ')')}`
       )
     } else {
       console.log(
-        `⇢ ${index + 1}. ${name} — ${pokedex} Pokémons ${chalk.gray(
+        `⇢ ${index + 1}. ${name} — ${pokedex} Pokémon ${chalk.gray(
           '(#' + id + ')'
         )}`
       )

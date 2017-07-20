@@ -27,5 +27,5 @@ module.exports = async () => {
   user.name ? shoutMessage(user.name) : null
   shoutMessage(`${user.email} ${user.emailConfirmed ? chalk.green('✔') : 'x'}`)
   shoutMessage(`Balance: $${user.balance}`)
-  shoutMessage(`You have ${user.pokemons.length} pokemons`)
+  shoutMessage(`You have ${user.pokedex} Pokémon`)
 }
