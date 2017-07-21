@@ -24,7 +24,7 @@ $ pokemon --help
     $ pokemon pokedex         Show your pokemons
     $ pokemon rankings        See Rankings of best trainers
     $ pokemon bag             Show your bag
-    $ pokemon shop            Buy items to put in your bag
+    $ pokemon mart            Buy items to put in your bag
     $ pokemon battle          Let's battle
     $ pokemon whoami          Show your information
 

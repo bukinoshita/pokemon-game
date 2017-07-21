@@ -11,7 +11,7 @@ const ora = require('ora')
 const { read, getUser, updateUser } = require('./../lib/cfg')
 
 module.exports = async () => {
-  const spinner = ora('Finding the nearest Poké Shop...')
+  const spinner = ora('Finding the nearest Poké Mart...')
   const token = read().token
   spinner.start()
 
@@ -26,7 +26,7 @@ module.exports = async () => {
 
   spinner.stop()
 
-  shoutMessage('Welcome to Poké Shop!')
+  shoutMessage('Welcome to Poké Mart!')
   shoutMessage(`Your balance $${chalk.bold(user.balance)}`)
 
   process.stdout.write('\n')
@@ -54,7 +54,7 @@ module.exports = async () => {
         },
         new inquirer.Separator(),
         {
-          name: chalk.gray('Exit Poké shop'),
+          name: chalk.gray('Exit Poké Mart'),
           value: false
         }
       ]
