@@ -21,11 +21,10 @@ module.exports = async () => {
   }
 
   spinner.stop()
-
   /* eslint-disable array-callback-return */
   rankings.trainers.map((trainer, index) => {
-    const { name, pokedex, _id } = trainer
-    const id = _id.slice(-4)
+    const { name, pokedex } = trainer
+    const id = user.uid.slice(-4)
 
     if (name === user.name) {
       console.log(

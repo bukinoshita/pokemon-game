@@ -85,7 +85,7 @@ async function register() {
   } while (!final)
 
   spinner.text = 'Confirmed email address!'
-  spinner.stopAndPersist('✔')
+  spinner.stopAndPersist(chalk.green('✔'))
 
   process.stdout.write('\n')
 
@@ -93,9 +93,14 @@ async function register() {
     token,
     user: {
       uid: userId,
-      email: user.email
+      email
     },
+    professor: user.name ? true : false, // eslint-disable-line no-unneeded-ternary
     lastUpdate: Date.now()
+  }
+
+  if (user.name) {
+    data.user.name = user.name
   }
 
   save(data)
