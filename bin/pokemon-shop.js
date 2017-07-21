@@ -54,7 +54,7 @@ module.exports = async () => {
         },
         new inquirer.Separator(),
         {
-          name: chalk.gray('Exit Poké mart'),
+          name: chalk.gray('Exit Poké Mart'),
           value: false
         }
       ]
