@@ -11,7 +11,7 @@ const professor = require('./pokemon-professor')
 const pokedex = require('./pokemon-pokedex')
 const rankings = require('./pokemon-rankings')
 const bag = require('./pokemon-bag')
-const shop = require('./pokemon-shop')
+const mart = require('./pokemon-shop')
 const whoami = require('./pokemon-whoami')
 
 const cli = meow(
@@ -23,7 +23,7 @@ const cli = meow(
     $ pokemon pokedex         Show your Pokémon
     $ pokemon rankings        See Rankings of best trainers
     $ pokemon bag             Show your bag
-    $ pokemon shop            Buy items to put in your bag
+    $ pokemon mart            Buy items to put in your bag
     $ pokemon battle          Let's battle
     $ pokemon whoami          Show your information
 
@@ -63,8 +63,8 @@ const run = () => {
     case 'bag':
       return bag()
 
-    case 'shop':
-      return shop()
+    case 'mart':
+      return mart()
 
     case 'battle':
       return shoutMessage(
