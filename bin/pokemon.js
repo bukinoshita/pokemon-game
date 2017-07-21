@@ -11,7 +11,7 @@ const professor = require('./pokemon-professor')
 const pokedex = require('./pokemon-pokedex')
 const rankings = require('./pokemon-rankings')
 const bag = require('./pokemon-bag')
-const mart = require('./pokemon-shop')
+const mart = require('./pokemon-mart')
 const whoami = require('./pokemon-whoami')
 
 const cli = meow(
