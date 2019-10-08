@@ -3582,9 +3582,9 @@ shelljs@^0.7.5:
     interpret "^1.0.0"
     rechoir "^0.6.2"
 
-shout-error@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/shout-error/-/shout-error-0.0.1.tgz#17d724da642e10c3cd5afc00d043f0dba6fe2927"
+shout-error@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/shout-error/-/shout-error-0.0.2.tgz#d43a43b789ba5b2ef298b362c1110fd70dd9b6b2"
   dependencies:
     chalk "^1.1.3"
 
