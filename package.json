@@ -30,7 +30,7 @@
     "ora": "^1.3.0",
     "pokemon-escape": "^0.0.1",
     "pokemon-player-escape": "^0.0.1",
-    "prompt-email": "^0.0.1",
+    "prompt-email": "^0.0.2",
     "querystring": "^0.2.0",
     "shout-error": "^0.0.1",
     "shout-message": "^0.0.1",
