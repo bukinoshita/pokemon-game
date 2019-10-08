@@ -33,7 +33,7 @@
     "prompt-email": "^0.0.1",
     "querystring": "^0.2.0",
     "shout-error": "^0.0.2",
-    "shout-message": "^0.0.1",
+    "shout-message": "^0.0.2",
     "shout-success": "^0.0.2",
     "unique-random-array": "^1.0.0",
     "update-notifier": "^2.2.0"
