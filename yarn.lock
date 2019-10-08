@@ -3193,9 +3193,9 @@ progress@^1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/progress/-/progress-1.1.8.tgz#e260c78f6161cdd9b0e56cc3e0a85de17c7a57be"
 
-prompt-email@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/prompt-email/-/prompt-email-0.0.1.tgz#4bf3fb9014281b290d57dbba8ed3c4f3b8a446f3"
+prompt-email@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/prompt-email/-/prompt-email-0.0.2.tgz#a3a160f513d2174625a04bbc2163696609b884ae"
   dependencies:
     ansi-escapes "^2.0.0"
     chalk "^1.1.3"
