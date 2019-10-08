@@ -23,7 +23,7 @@
     "catch-pokemon": "^0.0.1",
     "chalk": "^2.0.1",
     "define-probability": "^0.0.1",
-    "get-pokeball": "^0.0.1",
+    "get-pokeball": "^0.0.2",
     "inquirer": "^3.1.1",
     "meow": "^5.0.0",
     "node-fetch": "^1.7.1",

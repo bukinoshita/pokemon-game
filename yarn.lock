@@ -1669,6 +1669,10 @@ get-pokeball@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/get-pokeball/-/get-pokeball-0.0.1.tgz#70f90decf0d436825a6abe152dc8962ecf6f822c"
 
+get-pokeball@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/get-pokeball/-/get-pokeball-0.0.2.tgz#58aab1302b763a43848dbf57aa476fe60bb5d587"
+
 get-port@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/get-port/-/get-port-3.1.0.tgz#ef01b18a84ca6486970ff99e54446141a73ffd3e"
