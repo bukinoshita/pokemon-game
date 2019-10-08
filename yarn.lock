@@ -3492,9 +3492,9 @@ shout-message@^0.0.1:
   dependencies:
     chalk "^1.1.3"
 
-shout-success@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/shout-success/-/shout-success-0.0.1.tgz#61d1ab01490ec3eb20f1595092af60f5bc8096c8"
+shout-success@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/shout-success/-/shout-success-0.0.2.tgz#ebf4ab528975066eddc60ca9fa13855e70e2aaa8"
   dependencies:
     chalk "^1.1.3"
 
