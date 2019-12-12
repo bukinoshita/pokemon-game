@@ -36,7 +36,7 @@
     "shout-message": "^0.0.3",
     "shout-success": "^0.0.3",
     "unique-random-array": "^2.0.0",
-    "update-notifier": "^3.0.0"
+    "update-notifier": "^4.0.0"
   },
   "devDependencies": {
     "ava": "2.4.0",
