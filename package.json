@@ -27,7 +27,7 @@
     "inquirer": "^7.0.0",
     "meow": "^6.0.0",
     "node-fetch": "^2.0.0",
-    "ora": "^4.0.0",
+    "ora": "^5.0.0",
     "pokemon-escape": "^0.0.1",
     "pokemon-player-escape": "^0.0.1",
     "prompt-email": "^0.0.2",
