@@ -39,7 +39,7 @@
     "update-notifier": "^4.0.0"
   },
   "devDependencies": {
-    "ava": "2.4.0",
+    "ava": "3.15.0",
     "eslint-config-prettier": "6.9.0",
     "husky": "3.1.0",
     "lint-staged": "9.5.0",
