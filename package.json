@@ -44,7 +44,7 @@
     "husky": "3.1.0",
     "lint-staged": "9.5.0",
     "prettier": "1.19.1",
-    "xo": "0.18.2"
+    "xo": "0.37.1"
   },
   "bin": {
     "pokemon": "bin/pokemon.js"
